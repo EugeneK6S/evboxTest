@@ -25,8 +25,8 @@ func main() {
 
 	// getting bytes from the destination
 	resp, err := http.Get(os.Args[1])
-	if err != nil || resp.StatusCode != 200 {
-		fmt.Println("Couldn't establish connection to status page, " + err.Error())
+	if err != nil || resp == nil || resp.StatusCode != 200 {
+		fmt.Println("Couldn't establish the connection to a status page, please check the correctness of provided URL")
 		os.Exit(1)
 	}
 	defer resp.Body.Close()

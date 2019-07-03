@@ -17,3 +17,5 @@ go build -o tester main.go
 1. Using proper CLI package like spf13/cobra
 2. Better HTML-to-StringSlice conversion (if exists)
 3. More helper methods (to avoid some code repetition)
+4. More intellectual handling of states (I mean we have to maintain a dictionary of states, since website is not standardized, and that's counter-effective...)
+5. Better error handling (always and everywhere :))
